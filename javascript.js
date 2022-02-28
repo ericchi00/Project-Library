@@ -29,7 +29,7 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
-
+//create card elements
 function createCard() {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -57,14 +57,12 @@ function createCard() {
 function displayLibrary(library) {
     createCard();
     const cards = document.querySelectorAll('.card');
-    const readText = document.querySelectorAll('.change');
     library.forEach(function (book, index) {
         title.textContent = 'Title: ' + `${book.title}`;
         author.textContent = 'Author: ' + `${book.author}`;
         pages.textContent = 'Pages: ' + `${book.pages}`;
         read.textContent = 'Read: ' + `${book.read}`;
         cards[index].setAttribute('data-cardCount', index); //resets all the data-cardCount when one is deleted 
-        readText[index].setAttribute('data-change', index); //adds attribute to grab later to change textContent
     })
     addChangeReadStatus();
     addRemoveButtonFunction();
