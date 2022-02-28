@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 15%;
+    width: 100%;
+    background-color: #1C4E80;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    padding: 3rem;
+    color: white;
+    font-size: 3rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+.contentWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.formWrapper {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    bottom: 5rem;
+    right: 30px;
+    z-index: 9;
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    border-radius: 25px;
+    justify-content: center;
+  }
+
+#popupForm {
+    margin: 1rem;
+}
+
+label {
+    text-align: left;
+}
+
+input[type=text], input[type=number] {
+    float: right;
+}
+
+
+fieldset {
+    border: none;
+}
+
+#newBook {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 25px;
+    background: #555;
+    color: white;
+}
+
+#newBook:hover, .removeButton:hover, .changeRead:hover {
+    opacity: .8;
+}
+
+#newBook:active, .removeButton:active, .changeRead:active {
+    opacity: .6;
+}
+
+#newBook, .removeButton, .changeRead {
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: white;
+    width: 250px;
+    gap: 3px;
+    border: 2px solid #1F3F49;
+}
+
+#submit {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+
+.removeButton {
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+}
+
+.changeRead {
+    background-color:  #1F3F49;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+}
+
+.card li {
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
