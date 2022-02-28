@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheet.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +11,9 @@
   <title>Library App</title>
 </head>
 <body>
-  <header>Library</header>
+  <header>
+      <h1>Library</h1>
+    </header>
   <div class="contentWrapper"></div>
   <button id="newBook">New Book</button>
   <div class="formWrapper">
@@ -17,9 +22,9 @@
         <legend>New Book Form</legend>
         <label for="title">Title:</label>
         <input type="text" name="title" id="title">
-        <label for="author">Author</label>
+        <label for="author">Author:</label>
         <input type="text" name="author" id="author">
-        <label for="pages">Pages</label>
+        <label for="pages">Pages:</label>
         <input type="number" name="pages" id="pages">
         <p>Did you read this book?</p>
         <label for="readChoice1">Yes</label>
