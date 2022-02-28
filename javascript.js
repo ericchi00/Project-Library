@@ -41,6 +41,8 @@ function createCard() {
         read = document.createElement('p'),
         removeButton = document.createElement('button'),
         changeRead = document.createElement('button'),
+        listItem = document.createElement('li'),
+        listItem2 = document.createElement('li'),
     ]
     removeButton.classList.add('removeButton');
     removeButton.textContent = 'Remove';
@@ -50,6 +52,12 @@ function createCard() {
     for (i = 0; i < cardInfo.length; i++) {
         card.appendChild(cardInfo[i]);
     }
+    const list = document.createElement('ul');
+    card.appendChild(list);
+    listItem.appendChild(removeButton);
+    listItem2.appendChild(changeRead);
+    list.appendChild(listItem);
+    list.appendChild(listItem2);
 }
 
 
@@ -100,17 +108,20 @@ function addChangeReadStatus() {
     })
 }
 
+
+const popup = document.querySelector('#popupForm');
 //adds form input to library
 const submit = document.querySelector('#submit');
 submit.addEventListener('click', () => {
     const bookObj = new Book();
     addBookToLibrary(bookObj);
     displayLibrary(myLibrary);
+    popup.reset();
 });
 
 
 function openForm() {
-    document.querySelector('.formWrapper').style.display = 'block';
+    document.querySelector('.formWrapper').style.display = 'flex';
 }
 
 function closeForm() {
