@@ -1,133 +1,159 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
-    height: 15%;
-    width: 100%;
-    background-color: #1C4E80;
-    display: flex;
-    align-items: center;
+  height: 15%;
+  width: 100%;
+  background-color: #1c4e80;
+  display: flex;
+  align-items: center;
 }
 
 header h1 {
-    padding: 3rem;
-    color: white;
-    font-size: 3rem;
+  padding: 3rem;
+  color: white;
+  font-size: 3rem;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #f1f1f1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.contentContainer {
+  display: flex;
+  width: auto;
+  height: 85%;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 100%;
+  background-color: #c1c3c542;
 }
 
 .contentWrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 70vw;
+  gap: 15px;
 }
 
-.formWrapper {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    bottom: 5rem;
-    right: 30px;
-    z-index: 9;
-    width: 250px;
-    height: 200px;
-    background-color: white;
-    border-radius: 25px;
-    justify-content: center;
-  }
-
-#popupForm {
-    margin: 1rem;
+legend {
+  text-align: center;
+  padding-bottom: 1rem;
 }
-
-label {
-    text-align: left;
-}
-
-input[type=text], input[type=number] {
-    float: right;
-}
-
 
 fieldset {
-    border: none;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  background-color: white;
+  border: none;
+  padding: 1rem;
+  gap: 0.5rem;
+  border-radius: 10px;
+  min-width: 0;
 }
 
-#newBook {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    width: 100px;
-    height: 30px;
-    border: none;
-    border-radius: 25px;
-    background: #555;
-    color: white;
+input {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 4px #ebebeb;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #c2c2c2;
+  padding: 7px;
 }
 
-#newBook:hover, .removeButton:hover, .changeRead:hover {
-    opacity: .8;
+input[type="radio"] {
+  box-sizing: border-box;
+  box-shadow: 1px 1px 4px #ebebeb;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #c2c2c2;
+  padding: 7px;
 }
 
-#newBook:active, .removeButton:active, .changeRead:active {
-    opacity: .6;
-}
-
-#newBook, .removeButton, .changeRead {
-    cursor: pointer;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 25px;
-    background-color: white;
-    width: 250px;
-    gap: 3px;
-    border: 2px solid #1F3F49;
+.submitWrapper {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #submit {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+  width: 85px;
+  height: 25px;
+  background-color: #1c4e80;
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 4px #dadada;
+  border-radius: 3px;
 }
 
+button:hover {
+  filter: brightness(0.85);
+  cursor: pointer;
+}
+
+#newBook {
+  display: none;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 25px;
+  background: #555;
+  color: white;
+}
+
+#newBook:active,
+.removeButton:active,
+.changeRead:active {
+  opacity: 0.3;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: white;
+  width: 250px;
+  height: fit-content;
+  gap: 0.5rem;
+  text-align: center;
+}
 
 .removeButton {
-    background-color: red;
-    color: white;
-    width: 100px;
-    height: 40px;
-    border-radius: 15px;
-    border: none;
+  background-color: rgb(235, 61, 61);
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
 }
 
 .changeRead {
-    background-color:  #1F3F49;
-    color: white;
-    width: 100px;
-    height: 40px;
-    border-radius: 15px;
-    border: none;
+  background-color: #1f3f49;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
 }
 
 .card li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
